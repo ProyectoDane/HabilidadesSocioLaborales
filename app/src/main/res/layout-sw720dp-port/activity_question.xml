@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/landing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/test_question_bg"
+                android:padding="30dp"
+                tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/scenariosNavigatorLayout"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:background="@color/glass_white"
+        android:layout_marginLeft="40dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/scenariosNavigatorTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/backBtnBg"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/scenarios"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/contextual_color"
+            android:singleLine="true"/>
+
+        <RelativeLayout
+            android:id="@+id/backBtnBg"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/round_shadow">
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:background="@drawable/round_btn_green"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/backBtnArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back_arrow"/>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/scenariosListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scenariosNavigatorTitleTextView"
+            android:layout_marginTop="15dp"
+            android:divider="@null"
+            android:dividerHeight="-12dp"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent">
+        </ListView>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/questionsViewPager"
+        android:layout_width="520dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/scenariosNavigatorLayout"
+        android:layout_marginLeft="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/landingHeaderLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp">
+
+        <ImageView
+            android:id="@+id/settingsButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/settings_btn"
+            android:layout_toLeftOf="@+id/avatarLayout"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"/>
+
+        <RelativeLayout
+            android:id="@+id/avatarLayout"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/avatarImageView"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="1dp"
+                android:clickable="true" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/avatarFrameImageView"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="46dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/avatarFrameImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

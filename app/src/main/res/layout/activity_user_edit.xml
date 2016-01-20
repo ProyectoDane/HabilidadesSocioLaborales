@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/test_bg"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/dataRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/titleTextView"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+                <ImageView
+                    android:src="@drawable/balls"
+                    android:contentDescription="@string/content_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/titleTextView"
+                    android:layout_toEndOf="@+id/titleTextView"/>
+
+                <RelativeLayout
+                    android:id="@+id/nameRelativeLayout"
+                    android:layout_below="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/userNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="79dp"
+                        android:text="@string/name"
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp"/>
+
+                    <EditText
+                        android:id="@+id/userNameEditText"
+                        android:layout_marginLeft="250dp"
+                        android:layout_alignBaseline="@+id/userNameTextView"
+                        android:cursorVisible="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:background="@color/glass_white_opaque"
+                        android:shadowColor="#000000"
+                        android:singleLine="true"
+                        android:width="300dp"
+                        android:textSize="25sp"
+                        android:textColor="@android:color/white"
+                        android:maxLength="40" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lastNameRelativeLayout"
+                    android:layout_below="@+id/nameRelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/lastNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="34dp"
+                        android:text="@string/last_name"
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/lastNameEditText"
+                        android:cursorVisible="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="250dp"
+                        android:padding="5dp"
+                        android:background="@color/glass_white_opaque"
+                        android:shadowColor="#000000"
+                        android:singleLine="true"
+                        android:width="300dp"
+                        android:textSize="25sp"
+                        android:textColor="@android:color/white"
+                        android:layout_alignBaseline="@+id/lastNameTextView"
+                        android:maxLength="40" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bornDateRelativeLayout"
+                    android:layout_below="@+id/lastNameRelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/bornDateTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="34dp"
+                        android:text="@string/birth_date"
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/dateEditText"
+                        android:cursorVisible="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="250dp"
+                        android:padding="5dp"
+                        android:background="@color/glass_white_opaque"
+                        android:shadowColor="#000000"
+                        android:inputType="date"
+                        android:singleLine="true"
+                        android:width="300dp"
+                        android:textSize="25sp"
+                        android:textColor="@android:color/white"
+                        android:layout_alignBaseline="@+id/bornDateTextView" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/photoLayout"
+                android:background="@color/glass_white"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp">
+
+                <ImageView
+                    android:id="@+id/profileImageView"
+                    android:contentDescription="@string/content_description"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/test_avatar" />
+
+                <Button
+                    android:id="@+id/loadPictureButton"
+                    android:background="@drawable/button_bg"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profileImageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:text="@string/upload_photo"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/topLayout">
+
+            <Button
+                android:id="@+id/saveUserButton"
+                android:background="@drawable/button_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:padding="10dp"
+                android:text="@string/save_user"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
+

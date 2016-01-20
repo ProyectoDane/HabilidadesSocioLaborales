@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/dataRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Usuario"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:id="@+id/titleTextView"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true" />
+
+                <ImageView
+                    android:src="@drawable/balls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/titleTextView"/>
+
+                <TextView
+                    android:id="@+id/userNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="79dp"
+                    android:text="Nombre:"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/userNameEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/userNameTextView"
+                    android:layout_toRightOf="@+id/userNameTextView"
+                    android:singleLine="true"
+                    android:width="300dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/lastNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/userNameTextView"
+                    android:layout_marginTop="34dp"
+                    android:layout_toLeftOf="@+id/userNameEditText"
+                    android:text="Apellido:"
+                    android:textSize="25sp" />
+
+
+                <EditText
+                    android:id="@+id/lastNameEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/lastNameTextView"
+                    android:layout_toRightOf="@+id/lastNameTextView"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:width="300dp"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/bornDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/lastNameEditText"
+                    android:layout_marginTop="33dp"
+                    android:layout_toLeftOf="@+id/lastNameEditText"
+                    android:text="Fecha de Nacimiento:"
+                    android:textSize="25sp" />
+
+                <DatePicker
+                    android:id="@+id/datePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/bornDateTextView"
+                    android:layout_alignTop="@+id/bornDateTextView" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/photoLayout"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/dataRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/test_avatar" />
+
+                <Button
+                    android:id="@+id/loadPictureButton"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profileImageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:text="Subir Foto"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/topLayout">
+
+            <Button
+                android:id="@+id/saveUserButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:text="Guardar Usuario"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
+

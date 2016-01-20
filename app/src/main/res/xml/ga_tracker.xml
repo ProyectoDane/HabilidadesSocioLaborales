@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="TypographyDashes">
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+
+
+    <!-- The application name. Defaults to name specified for the application label -->
+    <string name="ga_appName">Habilidades Socio Laborales</string>
+
+
+    <!-- The dispatching period in seconds when Google Play services is
+         unavailable. The default period is 1800 seconds or 30 minutes -->
+    <integer name="ga_dispatchPeriod">120</integer>
+
+    <!-- Enable dry run mode. Default is false -->
+    <bool name="ga_dryRun">false</bool>
+
+    <!--  The following value should be replaced with correct property id. -->
+    <string name="ga_trackingId">UA-51638297-2</string>
+</resources>

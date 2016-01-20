@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="520dp"
+    android:layout_height="match_parent"
+    android:background="@color/glass_white"
+    android:layout_toRightOf="@+id/scenariosNavigatorLayout"
+    android:layout_marginLeft="20dp"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/questionRelativeLayoutSpeakerButton"
+        android:background="@color/contextual_color"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/questionSpeakerButton"
+            android:padding="10dp"
+            android:background="@color/contextual_color"
+            android:text="HOY ESTÁ LLOVIENDO, QUE LLEVARÍAS AL SALIR?"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/questionSpeakerButton"
+            android:contentDescription="@string/content_description"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/speaker_rounded_green" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/answersLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/questionRelativeLayoutSpeakerButton"
+        android:layout_above="@+id/nextLayout">
+
+        <ListView
+            android:id="@+id/answersListView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <RelativeLayout
+            android:id="@+id/nextBtnBg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_shadow">
+
+            <ImageView
+                android:id="@+id/nextBtnBgImageView"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_btn_green"
+                android:contentDescription="@string/content_description"/>
+
+            <ImageView
+                android:id="@+id/nextBtnArrow"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/next_arrow"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/nextQuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/nextBtnBg"
+            android:background="@drawable/text_bg"
+            android:padding="4dp"
+            android:text="@string/next_question"
+            android:textColor="@color/magenta"
+            android:textSize="12sp"
+            android:textStyle="italic|bold"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:id="@+id/backBtnBg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_shadow">
+
+            <ImageView
+                android:id="@+id/backBtnBgImageView"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_btn_green"
+                android:contentDescription="@string/content_description"/>
+
+            <ImageView
+                android:id="@+id/backBtnArrow"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/back_arrow"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/previousQuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/text_bg"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/last_question"
+            android:textColor="@color/magenta"
+            android:textSize="12sp"
+            android:textStyle="italic|bold"/>
+    </RelativeLayout>
+</RelativeLayout>

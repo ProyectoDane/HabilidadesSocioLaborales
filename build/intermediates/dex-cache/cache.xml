@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/abel/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/pre-dexed/debug/library-1.0.19-dc04f710634dbb1bec3c91eaccbd359687af4d3b.jar" />
+    </item>
+    <item
+        jar="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.0.89/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d71573c9c5ea98a8db47ad6ff993a63d492b3bfa">
+        <dex dex="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/pre-dexed/debug/classes-e28f3db643e94e343e89fe06cf1ae067ee565168.jar" />
+    </item>
+    <item
+        jar="/Users/abel/Library/Android/sdk/build-tools/22.0.1/renderscript/lib/renderscript-v8.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2b276904cd854be6d460f2bcec9cf2cddaf580c1">
+        <dex dex="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/pre-dexed/debug/renderscript-v8-345969cecac73b0951d53bac91f9d0d849d43afc.jar" />
+    </item>
+    <item
+        jar="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/exploded-aar/com.makeramen/roundedimageview/2.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="814fc0c3ec69a944add398217d90077301501a74">
+        <dex dex="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/pre-dexed/debug/classes-c6b10fc5e1291e3adaaa3004fb56e3135874744a.jar" />
+    </item>
+    <item
+        jar="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/jars/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-e013e7c97566a5817018809d7c79dc6d47ac90c6.jar" />
+    </item>
+    <item
+        jar="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/pre-dexed/debug/classes-67c2eb576c332a68f1a114cc69830a220da4b36d.jar" />
+    </item>
+    <item
+        jar="/Users/abel/.gradle/caches/modules-2/files-2.1/de.greenrobot/greendao/1.3.7/dda08161d004c4df96938da6909f1c2b96cd33c8/greendao-1.3.7.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="dda08161d004c4df96938da6909f1c2b96cd33c8">
+        <dex dex="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/pre-dexed/debug/greendao-1.3.7-033d5de5c769d4a5168ae6bc23e1d4f7bc23235f.jar" />
+    </item>
+    <item
+        jar="/Users/abel/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="/Users/abel/Documents/Belatrix/AndroidStudioProjects/Dane/FundacionNostoros/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-4a8320e9057d52a7bdacd45007c52ffb33658f53.jar" />
+    </item>
+
+</items>

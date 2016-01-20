@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/glass_white"
+                android:descendantFocusability="blocksDescendants"
+                android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/userImageLayout"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/userImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/userImageLayout"
+        android:layout_toEndOf="@+id/userImageLayout"
+        android:text="@string/name"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/userLastNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/userNameTextView"
+        android:layout_toEndOf="@+id/userNameTextView"
+        android:text="@string/last_name"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:singleLine="true" />
+
+    <RelativeLayout
+        android:id="@+id/userEditProfileLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/userDeleteProfileLayout">
+
+        <ImageButton
+            android:id="@+id/userEditProfileButton"
+            android:contentDescription="@string/content_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:background="@drawable/avatar_green_bg"
+            android:padding="15dp"
+            android:src="@drawable/edit"
+            android:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userEditProfileButton"
+            android:layout_centerHorizontal="true"
+            android:text="@string/update"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userDeleteProfileLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp">
+
+        <ImageButton
+            android:id="@+id/userDeleteProfileButton"
+            android:contentDescription="@string/content_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/avatar_green_bg"
+            android:padding="15dp"
+            android:src="@drawable/delete"
+            android:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userDeleteProfileButton"
+            android:layout_centerHorizontal="true"
+            android:text="@string/delete"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="glass_white">#20FFFFFF</color>
+    <color name="glass_white_opaque">#60FFFFFF</color>
+    <color name="grey">#4e4e4e</color>
+    <color name="dark_grey">#333333</color>
+    <color name="purple">#6a19b0</color>
+    <color name="green">#00e2b5</color>
+    <color name="magenta">#ff007e</color>
+    <color name="blue">#0060ff</color>
+    <color name="contextual_color">#00e2b5</color>
+    <color name="red_wrong">#f55157</color>
+    <color name="green_right">#4caf74</color>
+
+</resources>

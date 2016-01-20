@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/containerRelativeLayout"
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shadow_bg">
+
+        <TextView
+            android:id="@+id/answerTextView"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/itemAnswerSpeakerButton"
+            android:contentDescription="@string/content_description"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/answerTextView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/speaker_green" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/answerStatusImageView"
+        android:contentDescription="@string/content_description"
+        android:layout_centerVertical="true"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/containerRelativeLayout"
+        android:layout_toEndOf="@+id/containerRelativeLayout"/>
+
+</RelativeLayout>

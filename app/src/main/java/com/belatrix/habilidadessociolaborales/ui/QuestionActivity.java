@@ -1,5 +1,6 @@
 package com.belatrix.habilidadessociolaborales.ui;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -48,7 +50,8 @@ public class QuestionActivity extends BaseActivity implements ViewPager.OnPageCh
 
     private int mContextualColor;
     private long mCurrentScenarioId;
-    private long sessionId;
+    private long mSessionId;
+    private long mUserId;
 
     private ViewPager mQuestionsViewPager = null;
 
@@ -61,11 +64,11 @@ public class QuestionActivity extends BaseActivity implements ViewPager.OnPageCh
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
 
-        long userId = getIntent().getExtras().getLong("userid");
-        sessionId = getIntent().getExtras().getLong("sessionid");
+        mUserId = getIntent().getExtras().getLong("userid");
+        mSessionId = getIntent().getExtras().getLong("sessionid");
         mCurrentScenarioId = getIntent().getExtras().getLong(C.EXTRA_SCENARIO_ID);
-        mCurrentUser = UserManager.getInstance(this).getUser(userId);
-        mCurrentSession = SessionManager.getInstance(this).fetchSessionById(sessionId);
+        mCurrentUser = UserManager.getInstance(this).getUser(mUserId);
+        mCurrentSession = SessionManager.getInstance(this).fetchSessionById(mSessionId);
 
         initializeUI();
         populateData();
@@ -118,6 +121,17 @@ public class QuestionActivity extends BaseActivity implements ViewPager.OnPageCh
     private void populateScenarios() {
         ScenarioArrayAdapter scenarioArrayAdapter = new ScenarioArrayAdapter(this, mScenarios, mContextualColor, mCurrentScenarioId);
         mScenariosListView.setAdapter(scenarioArrayAdapter);
+        mScenariosListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(QuestionActivity.this, QuestionActivity.class);
+                intent.putExtra(C.EXTRA_SCENARIO_ID, mScenarios.get(i).getId());
+                intent.putExtra("userid", mUserId);
+                intent.putExtra("sessionid", mSessionId);
+                startActivity(intent);
+                QuestionActivity.this.finish();
+            }
+        });
     }
 
     private void populateQuestions() {
@@ -133,7 +147,7 @@ public class QuestionActivity extends BaseActivity implements ViewPager.OnPageCh
                     public void run() {
                         Log log = new Log();
                         log.setDate(Calendar.getInstance().getTime());
-                        log.setSessionId(sessionId);
+                        log.setSessionId(mSessionId);
                         log.setUser(mCurrentUser.getId());
                         log.setScenarioId(scenario.getId());
                         log.setScenarioName(scenario.getName());
@@ -152,7 +166,7 @@ public class QuestionActivity extends BaseActivity implements ViewPager.OnPageCh
             public void onWrongAnswer(final String answer) {
                 Log log = new Log();
                 log.setDate(Calendar.getInstance().getTime());
-                log.setSessionId(sessionId);
+                log.setSessionId(mSessionId);
                 log.setUser(mCurrentUser.getId());
                 log.setScenarioId(scenario.getId());
                 log.setScenarioName(scenario.getName());

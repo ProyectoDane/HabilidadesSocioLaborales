@@ -50,7 +50,7 @@ public class LogManager extends BaseManager {
     }
 
     public List<Log> fetchLogsByQuestion(long sessionId,long scenarioId, long questionId) {
-        return mLogDao.queryBuilder().where(LogDao.Properties.SessionId.eq(sessionId),LogDao.Properties.ScenarioId.eq(scenarioId),LogDao.Properties.QuestionId.eq(questionId)).list();
+        return mLogDao.queryBuilder().where(LogDao.Properties.SessionId.eq(sessionId),LogDao.Properties.ScenarioId.eq(scenarioId),LogDao.Properties.QuestionId.eq(questionId)).orderDesc(LogDao.Properties.IsCorrect).list();
     }
 
     public List<Log> fetchLogsByUser(long userId) {

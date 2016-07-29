@@ -49,6 +49,8 @@ public class QuestionPageFragment extends Fragment {
     private ImageView mNextBtnBgImageView;
     private ImageView mBackBtnBgImageView;
 
+    private List<Log> mLogs;
+
     private int mContextualColor = -1;
 
     public void setScenario(Scenario scenario, int questionOrder) {
@@ -114,12 +116,13 @@ public class QuestionPageFragment extends Fragment {
 
         if(mQuestionOrder == 0) {
             mBackBtnBg.setVisibility(View.INVISIBLE);
-            mPreviousQuestionTextView.setVisibility(View.INVISIBLE);
+            //mPreviousQuestionTextView.setVisibility(View.INVISIBLE);
             mNextBtnBg.setVisibility(View.VISIBLE);
+
             mNextQuestionTextView.setVisibility(View.VISIBLE);
         } else if (mQuestionOrder == mScenario.getQuestions().size()-1) {
             mNextBtnBg.setVisibility(View.INVISIBLE);
-            mNextQuestionTextView.setVisibility(View.INVISIBLE);
+            //mNextQuestionTextView.setVisibility(View.INVISIBLE);
             mBackBtnBg.setVisibility(View.VISIBLE);
             mPreviousQuestionTextView.setVisibility(View.VISIBLE);
         }
@@ -150,6 +153,18 @@ public class QuestionPageFragment extends Fragment {
             AnswersArrayAdapter adapter = new AnswersArrayAdapter(getActivity(), answers, true);
 
             mAnswersListView.setAdapter(adapter);
+
+            mLogs = LogManager.getInstance(getActivity()).fetchLogsByQuestion(mSession.getId(), mScenario.getId(), mQuestion.getId());
+
+            if (mLogs != null && mLogs.size()>0 && mLogs.get(0).getIsCorrect()){
+                mNextQuestionTextView.setVisibility(View.VISIBLE);
+                mNextBtnBg.setVisibility(View.VISIBLE);
+            }else{
+                mNextQuestionTextView.setVisibility(View.INVISIBLE);
+                mNextBtnBg.setVisibility(View.INVISIBLE);
+            }
+
+
         }
     }
 
@@ -215,8 +230,10 @@ public class QuestionPageFragment extends Fragment {
 
                             holder.answerValueTextView.setBackgroundDrawable(getActivity().getResources().getDrawable(R.drawable.answer_correct_bg));
                             holder.answerStatusImageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.right_answer));
-
+                            mNextQuestionTextView.setVisibility(View.VISIBLE);
+                            mNextBtnBg.setVisibility(View.VISIBLE);
                             mOnQuestionAnsweredListener.onValidAnswer(currentAnswer);
+
                             setEnabled(false);
                         } else {
                             holder.answerValueTextView.setBackgroundDrawable(getActivity().getResources().getDrawable(R.drawable.answer_incorrect_bg));
@@ -230,12 +247,10 @@ public class QuestionPageFragment extends Fragment {
             holder.answerValueTextView.setBackgroundDrawable(getActivity().getResources().getDrawable(R.drawable.answer_nr_bg));
             holder.answerStatusImageView.setImageDrawable(null);
 
-            List<Log> logs = LogManager.getInstance(mContext).fetchLogsByQuestion(mSession.getId(), mScenario.getId(), mQuestion.getId());
-
-            if(logs != null) {
-                for(int i = 0;i < logs.size();i++) {
-                    if(logs.get(i).getAnswered().equals(currentAnswer)) {
-                        if(logs.get(i).getIsCorrect()) {
+            if(mLogs != null) {
+                for(int i = 0;i < mLogs.size();i++) {
+                    if(mLogs.get(i).getAnswered().equals(currentAnswer)) {
+                        if(mLogs.get(i).getIsCorrect()) {
                             holder.answerValueTextView.setBackgroundDrawable(getActivity().getResources().getDrawable(R.drawable.answer_correct_bg));
                             holder.answerStatusImageView.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.right_answer));
                             setEnabled(false);

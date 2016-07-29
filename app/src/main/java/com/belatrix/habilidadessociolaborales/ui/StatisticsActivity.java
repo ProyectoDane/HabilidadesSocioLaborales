@@ -32,7 +32,7 @@ public class StatisticsActivity extends Activity {
         User user = UserManager.getInstance(this).getUser(userId);
 
         TextView mTitleTextView = (TextView) findViewById(R.id.titleTextView);
-        mTitleTextView.setText(String.format("Sesiones del alumno %s %s",user.getName(),user.getLastname()));
+        mTitleTextView.setText(String.format("Sesiones del usuario %s %s",user.getName(),user.getLastname()));
 
         Button mAllButton = (Button) findViewById(R.id.allLogsButton);
         mAllButton.setOnClickListener(new View.OnClickListener() {

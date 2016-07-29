@@ -35,6 +35,7 @@ public class ScenarioArrayAdapter extends ArrayAdapter<Scenario> {
             rowView = LayoutInflater.from(getContext()).inflate(R.layout.item_list_scenario, null);
 
             ScenarioItemViewHolder viewHolder = new ScenarioItemViewHolder();
+            viewHolder.rowView = rowView;
             viewHolder.scenarioNameTextView = (TextView) rowView.findViewById(R.id.scenarioListItem);
             viewHolder.itemListSpeakerButton = (ImageView) rowView.findViewById(R.id.itemListSpeakerButton);
 
@@ -92,6 +93,8 @@ public class ScenarioArrayAdapter extends ArrayAdapter<Scenario> {
             }
         });
 
+
+
         return rowView;
     }
 
@@ -103,5 +106,6 @@ public class ScenarioArrayAdapter extends ArrayAdapter<Scenario> {
     static class ScenarioItemViewHolder {
         public TextView scenarioNameTextView;
         public ImageView itemListSpeakerButton;
+        public View rowView;
     }
 }
